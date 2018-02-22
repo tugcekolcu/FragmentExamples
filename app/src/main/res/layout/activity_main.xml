@@ -21,6 +21,7 @@
         android:id="@+id/fragment_place"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="android.tugcekolcu.fragmentexamples.FragmentA" />
+        android:name="android.tugcekolcu.fragmentexamples.FragmentA" /> <!-- İlk fragment -->
+    
 
 </LinearLayout>
