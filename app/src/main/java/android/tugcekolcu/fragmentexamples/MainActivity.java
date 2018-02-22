@@ -28,9 +28,12 @@ public class MainActivity extends Activity {
             fr = new FragmentB();
         }
 
+        /*
+         ** Creating fragment dynamically by using java codes
+         */
         FragmentManager fm = getFragmentManager();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_place, fr);
+        fragmentTransaction.replace(R.id.my_relative_layout, fr);
         fragmentTransaction.commit();
 
     }
