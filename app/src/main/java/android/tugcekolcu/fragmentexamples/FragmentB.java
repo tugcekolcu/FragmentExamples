@@ -22,7 +22,12 @@ public class FragmentB extends Fragment  {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.fragment_second, container, false);
+        if(savedInstanceState!=null) { //eger fragment ilk kez aciliyorsa
 
+            myData=savedInstanceState.getString("data");
+            TextView text = (TextView) rootView.findViewById(R.id.tvResult);
+            text.setText(myData);
+        }
         return rootView;
     }
 
@@ -43,7 +48,12 @@ public class FragmentB extends Fragment  {
 
     }
 
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
 
+        outState.putString("data", myData); //stack'e veri atiyor.
+    }
 
 
 }
